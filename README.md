@@ -15,7 +15,3 @@ the accuracy overall. Also, mispelled words can be unique so tokenization by cha
 Next I would make a Sequential model. It will have the obvious Embeddings layer. Then we will add two LSTM layers one being bidirectional. This will help the network recognize patters on the front and back of the data. It will help it get context on inputs in simple terms. Then the last layer is a Fully connected Dense layer with the `softmax` activation. What that would do is classify the textual input as one of the labeled words. We will train it wiith the Adam optimizer and Sparse_categorical_crossentropy. This is commonly
 used for multiclass classification. When I run the model, it will take a misspelled word input from the user. It will then proceed to classify it. The classification is returned in an index where each index is one lablem and the label contains the probability of the prediction being said class. So find the label, we will get the index of the highest percentage in the array. That index will be converted to a label. The run function would proceed to return the label along with the confidence of it being said label.
 
-# V2
-Version 2 is in the making.
-## Improvements
-It will be able to take in a sentence and the last word in the sentence should be a misspelled word. It will take that and correct it. Hopefully it can use the sentence as better context and be more accurate with fixing the misspelled word.
